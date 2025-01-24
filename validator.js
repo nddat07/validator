@@ -96,7 +96,7 @@ validator.isPassword_confirmation = function(selector, passwordSelector) {
         test: (value) => {
             const passwordElement = document.querySelector(passwordSelector)
             if (!value.trim()) {
-                return 'Vui lòng lai nhập mật khẩu'; 
+                return 'Vui lòng nhập lai mật khẩu'; 
             }
             if (passwordElement.value !== value) {
                 return 'mat khau khong hop le'
@@ -106,16 +106,7 @@ validator.isPassword_confirmation = function(selector, passwordSelector) {
     }
 }   
 
-validator({
-    form: '#form-1',
-    errorMsg: '.form-message',
-    rules: [
-        validator.isRequired('#username'),
-        validator.isEmail('#Email'),
-        validator.isPassword('#password', 6),
-        validator.isPassword_confirmation('#password_confirmation' , '#password')
-    ]
-});
+
 
 
 

@@ -41,5 +41,17 @@
     </div>
 
     <script src="validator.js"></script>
+    <script>
+        validator({
+    form: '#form-1',
+    errorMsg: '.form-message',
+    rules: [
+        validator.isRequired('#username'),
+        validator.isEmail('#Email'),
+        validator.isPassword('#password', 6),
+        validator.isPassword_confirmation('#password_confirmation' , '#password')
+    ]
+    });
+    </script>
 </body>
 </html>
