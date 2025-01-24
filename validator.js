@@ -96,7 +96,7 @@ validator.isPassword_confirmation = function(selector, passwordSelector) {
         test: (value) => {
             const passwordElement = document.querySelector(passwordSelector)
             if (!value.trim()) {
-                return 'Vui lòng nhập mật khẩu'; 
+                return 'Vui lòng lai nhập mật khẩu'; 
             }
             if (passwordElement.value !== value) {
                 return 'mat khau khong hop le'
